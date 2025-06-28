@@ -11,7 +11,12 @@ Array.from(buttons).forEach((button)=>{
             string=""
             document.querySelector('input').value=string
         }
-        else if(e.target.innerHTML =='M+' || 'M-'){
+      else if(e.target.innerHTML =='M+'){
+            string=""
+            document.querySelector('input').value=string
+            alert("i am not in working so plese use me after some time")
+        }
+        else if(e.target.innerHTML =='M-'){
             string=""
             document.querySelector('input').value=string
             alert("i am not in working so plese use me after some time")
