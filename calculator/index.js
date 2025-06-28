@@ -30,3 +30,39 @@ Array.from(buttons).forEach((button)=>{
     })
 })
 
+
+// for key board
+
+document.addEventListener("keydown",function(event){
+    const key=event.key;
+    
+
+    // number allow 
+    if("0123456789+-*/.".includes(key)){
+        string+=key;
+        document.querySelector('input').value=string
+    }
+        // ENter or =
+        else if(key==="Enter" || key==="="){
+            try{
+                string=eval(string);
+                document.querySelector('input').value=string
+            }
+            catch{
+                document.querySelector('input').value="Error"
+                string="";
+            }
+        }
+        else if(key=='c' || key=='C'){
+            string="";
+            document.querySelector('input').value=string;
+        }
+        else if(key==="Backspace"){
+            string=string.slice(0,-1);
+            document.querySelector('input').value=string;
+        }
+})
+ 
+
+
+
